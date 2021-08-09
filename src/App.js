@@ -1,41 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-
 import React from 'react';
+import BlogCard from './BlogCard';
 
 function App() {
 
-  const blogObj = {
-    title: 'Blog Card',
-    description: 'Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem'
-  }
+  const blogArr =  [{
+    id: 1,
+    tittle: 'Blog Card 1',
+    description: 'Card 1'
+  },
+  {
+    id: 2,
+    tittle: 'Blog Card 2',
+    description: 'Card 2'
+  },
+  {
+    id: 3,
+    tittle: 'Blog Card 3',
+    description: 'Card 3'
+  }]  
 
   {/*const getFullName = (firstName,lastName) => `${firstName} ${lastName}` */}
   
-  
+  const blogCards = blogArr.map( (item, pos) => {
+    return (
+     <BlogCard key={pos} tittle = {item.tittle} description = {item.description} id ={item.id} />
+    )
+  } )
 
   return (
     <div className="App">     
-      <div className = "BlogCard">
-        <h3>{blogObj.title}</h3>
-        <p>{blogObj.description}</p>
-      </div>
-      <div className = "BlogCard">
-        <h3>{blogObj.title}</h3>
-        <p>{blogObj.description}</p>
-      </div>
-      <div className = "BlogCard">
-        <h3>{blogObj.title}</h3>
-        <p>{blogObj.description}</p>
-      </div>
-      
-
-{/*doesnt exist for inside JSX, so it must be 
-   mArr.map()
-   for  if, else
-   mArr[0] > 0 ? "True" : "False" 
-   */}
-    
+     {blogCards}
     </div>
   );
 }

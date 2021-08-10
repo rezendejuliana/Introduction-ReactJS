@@ -2,12 +2,3 @@
     text-align: center;
 }
 
-.BlogCard {
-    margin: 16px;
-    padding: 16px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgb(240, 159, 197);
-    color: rgb(177, 29, 78);
-    
-  }
